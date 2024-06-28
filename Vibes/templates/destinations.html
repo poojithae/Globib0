@@ -1,0 +1,637 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Destinations</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/destinations.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/destinations_responsive.css' %}">
+</head>
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+							<div class="logo"><a href="/index">Globib0</a></div>
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li><a href="/index">Home</a></li>
+									<li><a href="/about">About us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="/news">News</a></li>
+									<li><a href="/contact">Contact</a></li>
+								</ul>
+							</nav>
+							<div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
+
+							<!-- Hamburger -->
+
+							<div class="hamburger ml-auto">
+								<i class="fa fa-bars" aria-hidden="true"></i>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_social d-flex flex-row align-items-center justify-content-start">
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu">
+		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+			<div class="menu_logo"><a href="/destinations">Globib0</a></div>
+			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
+		</div>
+		<div class="menu_content">
+			<ul>
+				<li><a href="/inex">Home</a></li>
+				<li><a href="/about">About us</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="/news">News</a></li>
+				<li><a href="/contact">Contact</a></li>
+			</ul>
+		</div>
+		<div class="menu_social">
+			<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+			<ul class="d-flex flex-row align-items-start justify-content-start">
+				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="background_image" style="background-image:url('{% static 'images/destinations.jpg' %}')"></div>
+	</div>
+
+	<!-- Search -->
+
+	<div class="home_search">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+						<div class="home_search_title">Search for your trip</div>
+						<div class="home_search_content">
+							<form action="#" class="home_search_form" id="home_search_form">
+								<div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" placeholder="City" required="required">
+									<input type="text" class="search_input search_input_2" placeholder="Departure" required="required">
+									<input type="text" class="search_input search_input_3" placeholder="Arrival" required="required">
+									<input type="text" class="search_input search_input_4" placeholder="Budget" required="required">
+									<button class="home_search_button">search</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Destinations -->
+
+	<div class="destinations" id="destinations">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">simply amazing places</div>
+					<div class="section_title"><h2>Popular Destinations</h2></div>
+				</div>
+			</div>
+			<div class="row destination_sorting_row">
+				<div class="col">
+					<div class="destination_sorting d-flex flex-row align-items-start justify-content-start">
+						<div class="sorting">
+							<ul class="item_sorting">
+								<li>
+									<span class="sorting_text">Sort By</span>
+									<i class="fa fa-chevron-down" aria-hidden="true"></i>
+									<ul>
+										<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "original-order" }'><span>Show All</span></li>
+										<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "price" }'><span>Price</span></li>
+										<li class="product_sorting_btn" data-isotope-option='{ "sortBy": "name" }'><span>Name</span></li>
+									</ul>
+								</li>
+								<li>
+									<span class="sorting_text">Categories</span>
+									<i class="fa fa-chevron-down" aria-hidden="true"></i>
+									<ul>
+										<li class="num_sorting_btn"><span>Category</span></li>
+										<li class="num_sorting_btn"><span>Category</span></li>
+										<li class="num_sorting_btn"><span>Category</span></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="sort_box ml-auto"><i class="fa fa-th" aria-hidden="true"></i></div>
+					</div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid row row-cols-md-3 gap-4">
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/charminar.jpg' %}" class="destination_image-img-top" alt="">
+								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Hyderabad</a></div><br>
+								<div class="destination_subtitle"><p>City that never sleeps.</p></div>
+								<div class="destination_price">From 500/-</div>
+								<div class="destination_list">
+									<ul>
+										<li>Visit Charminar</li>
+                                        <h5>Famous Places: </h5>
+											<li>Explore Golconda Fort</li> 
+											<li>Hussain Sagar Lake</li>
+											<li>Ramoji Film City </li>
+											<li>Durgam cheruvu</li>
+                                        <h5>Famous Restaurants:</h5>
+											<li>Paradise Restaurant (for Biryani)</li>
+											<li>Pista House (for Haleem)</li>
+											<li>Chutneys (for South Indian breakfast)</li>
+											<li>Rayalaseema Ruchulu (for Andhra cuisine)</li>
+											<li>Ohri's Jiva Imperia (fine dining)</li>
+                                        <h5>Shopping:</h5>
+											<li>Laad Bazaar (for bangles and pearls)</li>
+                                            <li>Moazzam Jahi Market (for spices and local snacks)</li>
+                                            <li>Hyderabad Central Mall (for branded shopping)</li>
+                                            <li>Banjara Hills (for upscale boutiques)</li>
+                                            <li>Shilparamam (crafts village)</li>
+										<h5>5-Star Hotels:</h5>
+                                            <li>Trident Hyderabad</li>
+											<li>Taj Krishna</li>
+                                            <li>Park Hyatt Hyderabad</li>
+                                            <li>ITC Kakatiya</li>
+                                            <li>Novotel Hyderabad Convention Centre</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/Banglore.webp' %}" class="destination_image-img-top" alt="">
+							</div><br><br>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Bangalore</a></div><br>
+								<div class="destination_subtitle"><p>Known as the Silicon Valley of India, Bangalore is a vibrant city with a pleasant climate, lush parks, and booming IT industry.</p></div>
+								<div class="destination_price">From 1000/-</div><br>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5> 
+											<li>Lalbagh Botanical Garden</li>
+											<li>Bangalore Palace</li>
+											<li>Cubbon Park</li>
+											<li>Tipu Sultan's Summer Palace</li>
+											<li>Bannerghatta National Park</li>
+										<h5>Famous Restaurants:</h5>
+											<li>MTR (Mavalli Tiffin Room)</li>
+											<li>Koshy's Restaurant</li>
+											<li>Toit (microbrewery)</li>
+											<li>Vidyarthi Bhavan (for dosas)</li>
+											<li>Ebony (rooftop dining)</li>
+											
+										<h5>Shopping:</h5>
+											<li>Commercial Street (for clothes and accessories)</li>
+											<li>Brigade Road (for trendy fashion)</li>
+											<li>UB City (luxury shopping)</li>
+											<li>Jayanagar 4th Block (for traditional silk sarees)</li>
+											<li>Malleswaram (local markets)</li>
+											<h5>5-Star Hotels:</h5>
+											<li>The Leela Palace Bangalore</li>
+											<li>Taj West End</li>
+											<li>ITC Gardenia</li>
+											<li>JW Marriott Hotel Bengaluru</li>
+											<li>The Oberoi Bengaluru</li>
+										<li>Guided visits: Visit Lalbagh Botanical Garden</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/Mumbai.jpg' %}" class="destination_image-img-top" alt="">
+							</div><br><br>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Mumbai</a></div><br>
+								<div class="destination_subtitle"><p>Financial capital of India.</p></div>
+								<div class="destination_price">From 900/-</div><br>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5>
+										<li>Gateway of India</li>
+										<li>Marine Drive</li>
+										<li>Elephanta Caves</li>
+										<li>Juhu Beach, Bollywood Film City tour</li>
+										<h5>Famous Restaurants:</h5>
+										<li>Leopold Cafe</li>
+										<li>Britannia & Co. (for Parsi cuisine)</li>
+										<li>Trishna (for seafood)</li>
+										<li>Bademiya (street food)</li>
+										<li>Aer (rooftop bar)</li>
+										<h5>Shopping:</h5>
+										<li>Colaba Causeway (for souvenirs and clothes)</li>
+										<li>Fashion Street (bargain shopping)</li>
+										<li>High Street Phoenix Mall (for branded shopping)</li>
+										<li>Crawford Market (for fruits and spices)</li>
+										<li>Linking Road (fashion and accessories)</li>
+										<h5>5-Star Hotels:</h5>
+                                        <li>The Taj Mahal Palace</li>
+                                        <li>The Oberoi Mumbai</li>
+                                        <li>JW Marriott Mumbai Juhu</li>
+                                        <li>Trident Nariman Point</li>
+                                        <li>Four Seasons Hotel Mumbai</li>
+										<li>Guided visits: Visit Gateway of India</li>
+									</ul><br><br><br><br><br>
+								</div>
+							</div>
+						</div>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/Agra.jpeg' %}" class="destination_image-img-top" alt="">
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Agra</a></div><br>
+								<div class="destination_subtitle"><p>Home to the iconic Taj Mahal, one of the Seven Wonders of the World.</p></div>
+								<div class="destination_price">From 1200/-</div>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5>
+										<li>Taj Mahal</li>
+										<li>Fatehpur Sikri</li>
+										<li>Mehtab Bagh (view of Taj Mahal)</li>
+										<li>Tomb of Itimad-ud-Daulah</li>
+										<h5>Famous Restaurants:</h5>
+										<li>Pinch of Spice</li>
+										<li>Dasaprakash (South Indian cuisine)</li>
+										<li>Mama Chicken Mama Franky House (street food)</li>
+										<li>Shankara Vegis Restaurant</li>
+										<h5>Shopping:</h5>
+										<li>Sadar Bazaar (for leather goods and handicrafts)</li>
+										<li>Kinari Bazaar (for fabrics and wedding attire)</li>
+										<li>Subhash Bazaar (for local sweets)</li>
+										<li>Shah Market (for souvenirs)</li>
+										<li>TDI Mall (modern shopping experience)</li>
+										<h5>5-Star Hotels:</h5>
+                                          <li>ITC Mughal, A Luxury Collection Hotel</li>
+                                          <li>The Oberoi Amarvilas</li>
+                                          <li>Trident, Agra</li>
+                                          <li>Jaypee Palace Hotel & Convention Centre</li>
+                                          <li>Courtyard by Marriott Agra</li>
+										
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/Kerala.jpg' %}" class="destination_image-img-top" alt="">
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Kerala</a></div><br>
+								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.God\'s Own Country, known for its backwaters, lush greenery, and cultural diversity.</p></div>
+								<div class="destination_price">From 800/-</div>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5>
+										<li>Alleppey Backwaters</li>
+										<li>Munnar Tea Gardens</li>
+										<li>Mehtab Bagh (view of Taj Mahal)</li>
+										<li>Tomb of Itimad-ud-Daulah</li>
+										<h5>Famous Restaurants:</h5>
+										<li>Pinch of Spice</li>
+										<li>Dasaprakash (South Indian cuisine)</li>
+										<li>Mama Chicken Mama Franky House (street food)</li>
+										<li>Shankara Vegis Restaurant</li>
+										<h5>Shopping:</h5>
+										<li>Sadar Bazaar (for leather goods and handicrafts)</li>
+										<li>Kinari Bazaar (for fabrics and wedding attire)</li>
+										<li>Subhash Bazaar (for local sweets)</li>
+										<li>Shah Market (for souvenirs)</li>
+										<li>TDI Mall (modern shopping experience)</li>
+										<h5>5-Star Hotels:</h5>
+                                        <li>Vivanta by Taj - Malabar</li>
+                                        <li>The Leela Kovalam Beach</li>
+                                        <li>Kumarakom Lake Resort</li>
+                                        <li>Niraamaya Retreats Backwaters & Beyond, Kumarakom</li>
+                                        <li>Crowne Plaza Kochi</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/goa.jpg' %}" class="destination_image-img-top" alt="">
+							</div><br><br>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Goa</a></div><br>
+								<div class="destination_subtitle"><p>Famous for beaches and nightlife.</p></div>
+								<div class="destination_price">From 850/-</div>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5>
+										<li>Baga Beach</li>
+										<li>Basilica of Bom Jesus</li>
+										<li>Dudhsagar Waterfalls</li>
+										<li>Fort Aguada</li>
+										<li>Anjuna Flea Market</li>
+										
+										<h5>Famous Restaurants:</h5>
+										<li>Britto's</li>
+										<li>Fisherman's Wharf</li>
+										<li>Souza Lobo</li>
+										<li>Thalassa</li>
+										
+										<h5>Shopping:</h5>
+										<li>Anjuna Flea Market</li>
+										<li>Mapusa Market</li>
+										<li>Calangute Market Square</li>
+										<li>Arpora Night Market</li>
+										<li>Panjim Market</li>
+										
+										<h5>5-Star Hotels:</h5>
+										<li>Grand Hyatt Goa</li>
+										<li>Taj Exotica Resort & Spa, Goa</li>
+										<li>The Leela Goa</li>
+										<li>W Goa</li>
+										<li>Park Hyatt Goa Resort and Spa</li>
+									</ul><br><br><br>
+								</div>
+							</div>
+						</div><br><br>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/destination_4.jpg' %}" class="destination_image-img-top" alt="">
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">New Delhi</a></div><br>
+								<div class="destination_subtitle"><p>Explore the heart of India's culture and history.</p></div>
+								<div class="destination_price">From 650/-</div>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5>
+										<li>Red Fort</li>
+										<li>Qutub Minar</li>
+										<li>India Gate</li>
+										<li>Humayun's Tomb</li>
+										<li>Lotus Temple</li>
+										
+										<h5>Famous Restaurants:</h5>
+										<li>Bukhara (at ITC Maurya)</li>
+										<li>Karim's</li>
+										<li>Indian Accent</li>
+										<li>Paranthe Wali Gali</li>
+										
+										<h5>Shopping:</h5>
+										<li>Chandni Chowk</li>
+										<li>Dilli Haat</li>
+										<li>Select Citywalk Mall</li>
+										<li>Khan Market</li>
+										<li>Janpath Market</li>
+										
+										<h5>5-Star Hotels:</h5>
+										<li>The Leela Palace New Delhi</li>
+										<li>Taj Palace, New Delhi</li>
+										<li>ITC Maurya, a Luxury Collection Hotel</li>
+										<li>The Oberoi, New Delhi</li>
+										<li>JW Marriott Hotel New Delhi Aerocity</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/coimbatore.jpg' %}" class="destination_image-img-top" alt="">
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Coimbatore</a></div><br>
+								<div class="destination_subtitle"><p>Explore the industrial hub and cultural heritage of South India.</p></div>
+								<div class="destination_price">From 879/-</div>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5>
+										<li>Marudhamalai Temple</li>
+										<li>Dhyanalinga Temple</li>
+										<li>Gedee Car Museum</li>
+										<li>Kovai Kutralam Falls</li>
+										<li>Black Thunder Theme Park</li>
+										
+										<h5>Famous Restaurants:</h5>
+										<li>Junior Kuppanna</li>
+										<li>Sree Annapoorna Sree Gowrishankar</li>
+										<li>Geetha Cafe</li>
+										<li>Barbeque Nation</li>
+										
+										<h5>Shopping:</h5>
+										<li>Brookefields Mall</li>
+										<li>RS Puram Market</li>
+										<li>Fun Republic Mall</li>
+										<li>Cross-Cut Road</li>
+										<li>Oppanakara Street</li>
+										
+										<h5>5-Star Hotels:</h5>
+										<li>Le Meridien Coimbatore</li>
+										<li>Vivanta Coimbatore</li>
+										<li>The Residency Towers Coimbatore</li>
+										<li>Radisson Blu Coimbatore</li>
+										<li>WelcomHotel Coimbatore</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Destination -->
+						<div class="destination item col mb-4">
+							<div class="destination_image">
+								<img src="{% static 'images/Kolkata.jpeg' %}" class="destination_image-img-top" alt="">
+							</div>
+							<div class="destination_content">
+								<div class="destination_title"><a href="#">Kolkata</a></div><br>
+								<div class="destination_subtitle"><p>Immerse yourself in the cultural capital of India's eastern region.</p></div>
+								<div class="destination_price">From 679/-</div>
+								<div class="destination_list">
+									<ul>
+										<h5>Famous Places:</h5>
+										<li>Victoria Memorial</li>
+										<li>Howrah Bridge</li>
+										<li>Indian Museum</li>
+										<li>Dakshineswar Kali Temple</li>
+										<li>Princep Ghat</li>
+										
+										<h5>Famous Restaurants:</h5>
+										<li>Oh! Calcutta</li>
+										<li>6 Ballygunge Place</li>
+										<li>Peter Cat</li>
+										<li>Flurys</li>
+										
+										<h5>Shopping:</h5>
+										<li>New Market</li>
+										<li>College Street</li>
+										<li>South City Mall</li>
+										<li>Dakshinapan Shopping Complex</li>
+										<li>Gariahat Market</li>
+										
+										<h5>5-Star Hotels:</h5>
+										<li>The Oberoi Grand Kolkata</li>
+										<li>Taj Bengal Kolkata</li>
+										<li>ITC Sonar, a Luxury Collection Hotel</li>
+										<li>Hyatt Regency Kolkata</li>
+										<li>JW Marriott Hotel Kolkata</li>
+									</ul><br><br>
+									
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="row load_more_row">
+				<div class="col">
+					<div class="button load_more_button"><a href="#">load more</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{% static 'images/footer_1.jpg' %}" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter">
+						<div class="newsletter_title_container text-center">
+							<div class="newsletter_title">Subscribe to our newsletter to get the latest trends & news</div>
+							<div class="newsletter_subtitle">Join our database NOW!</div>
+						</div>
+						<div class="newsletter_form_container">
+							<form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
+								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
+									<div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
+									<div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
+								</div>
+								<div><button class="newsletter_button">subscribe</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_contact_row">
+				<div class="col-xl-10 offset-xl-1">
+					<div class="row">
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/sign.svg' %}" alt=""></div>
+								<div class="footer_contact_title">give us a call</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>Office Landline: +44 5567 32 664 567</li>
+										<li>Mobile: +44 5567 89 3322 332</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/trekking.svg' %}" alt=""></div>
+								<div class="footer_contact_title">come & drop by</div>
+								<div class="footer_contact_list">
+									<ul style="max-width:190px">
+										<li>4124 Barnes Street, Sanford, FL 32771</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- Footer Contact Item -->
+						<div class="col-xl-4 footer_contact_col">
+							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
+								<div class="footer_contact_icon"><img src="{% static 'images/around.svg' %}" alt=""></div>
+								<div class="footer_contact_title">send us a message</div>
+								<div class="footer_contact_list">
+									<ul>
+										<li>youremail@gmail.com</li>
+										<li>Office@yourbusinessname.com</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+	</footer>
+</div>
+
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/destinations.js' %}"></script>
+</body>
+</html>
